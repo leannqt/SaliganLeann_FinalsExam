@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-label="Illustration of a wallet with coins and a rising savings bar chart">
+  <rect width="400" height="260" rx="20" fill="#CCFBF1"/>
+  <rect x="60" y="110" width="200" height="120" rx="16" fill="#0F766E"/>
+  <rect x="200" y="150" width="80" height="44" rx="10" fill="#115E59"/>
+  <circle cx="226" cy="172" r="8" fill="#F59E0B"/>
+  <circle cx="290" cy="90" r="26" fill="#F59E0B"/>
+  <text x="290" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0F172A">₱</text>
+  <circle cx="330" cy="140" r="18" fill="#FBBF24"/>
+  <rect x="300" y="190" width="18" height="40" rx="4" fill="#14B8A6"/>
+  <rect x="326" y="170" width="18" height="60" rx="4" fill="#0D9488"/>
+  <rect x="352" y="145" width="18" height="85" rx="4" fill="#0F766E"/>
+</svg>
