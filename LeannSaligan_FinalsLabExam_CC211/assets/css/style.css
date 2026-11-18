@@ -1,0 +1,107 @@
+/* ===== Gastos – Student Expense Tracker ===== */
+:root {
+  --g-primary: #0f766e;
+  --g-primary-dark: #115e59;
+  --g-accent: #f59e0b;
+  --g-bg: #f8fafc;
+  --g-text: #0f172a;
+  --g-muted: #475569;
+  --g-border: #e2e8f0;
+  --g-radius: 12px;
+  --bs-body-font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bs-body-color: var(--g-text);
+}
+
+body { background: var(--g-bg); line-height: 1.6; }
+h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.01em; }
+.text-muted { color: var(--g-muted) !important; }
+
+/* Skip link + visible focus (accessibility) */
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--g-accent); color: var(--g-text);
+  padding: .5rem 1rem; z-index: 2000; font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+:focus-visible { outline: 3px solid var(--g-accent) !important; outline-offset: 2px; }
+
+/* Navbar */
+.g-navbar { background: var(--g-primary); }
+.g-navbar .navbar-brand { color: #fff; font-weight: 800; }
+.g-navbar .nav-link { color: #e6fffb; border-radius: 8px; padding: .5rem .9rem; }
+.g-navbar .nav-link:hover { background: rgba(255,255,255,.12); color: #fff; }
+.g-navbar .nav-link.active { background: #fff; color: var(--g-primary-dark); font-weight: 600; }
+.g-navbar .navbar-toggler { border-color: rgba(255,255,255,.6); }
+.g-navbar .navbar-toggler-icon { filter: invert(1); }
+
+/* Cards */
+.g-card {
+  background: #fff; border: 1px solid var(--g-border);
+  border-radius: var(--g-radius); padding: 1.25rem; height: 100%;
+}
+.g-stat-label { color: var(--g-muted); font-size: .9rem; margin-bottom: .25rem; }
+.g-stat-value { font-size: 1.75rem; font-weight: 800; color: var(--g-primary-dark); margin: 0; }
+.g-stat-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #ccfbf1; color: var(--g-primary-dark); font-size: 1.25rem;
+}
+
+/* Hero */
+.g-hero { padding: 2.5rem 0 1.5rem; }
+.g-hero img { max-width: 100%; height: auto; }
+
+/* Buttons */
+.btn-primary {
+  --bs-btn-bg: var(--g-primary); --bs-btn-border-color: var(--g-primary);
+  --bs-btn-hover-bg: var(--g-primary-dark); --bs-btn-hover-border-color: var(--g-primary-dark);
+  --bs-btn-active-bg: var(--g-primary-dark); --bs-btn-active-border-color: var(--g-primary-dark);
+}
+.btn-accent { background: var(--g-accent); color: var(--g-text); font-weight: 600; border: 0; }
+.btn-accent:hover { background: #d97706; color: #fff; }
+
+/* Category badges (dark text on light fills for contrast) */
+.cat-badge { font-weight: 600; padding: .4em .7em; border-radius: 999px; font-size: .8rem; color: var(--g-text); }
+.cat-Food { background: #fde68a; }
+.cat-Transport { background: #bfdbfe; }
+.cat-School { background: #bbf7d0; }
+.cat-Load { background: #e9d5ff; }
+.cat-Entertainment { background: #fecdd3; }
+.cat-Other { background: #e2e8f0; }
+
+/* Category bars */
+.cat-bar { height: .85rem; border-radius: 999px; background: #e2e8f0; }
+.cat-bar .progress-bar { background: var(--g-primary); }
+
+/* Recent list */
+.recent-item { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid var(--g-border); }
+.recent-item:last-child { border-bottom: 0; }
+.amount { font-weight: 700; white-space: nowrap; }
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+.table > :not(caption) > * > * { padding: .85rem .75rem; vertical-align: middle; }
+.empty-state { text-align: center; padding: 3rem 1rem; color: var(--g-muted); }
+.empty-state i { font-size: 3rem; color: var(--g-primary); }
+
+/* Forms */
+.form-label { font-weight: 600; }
+.form-control, .form-select { border-radius: 10px; padding: .65rem .85rem; }
+.form-text { color: var(--g-muted); }
+.invalid-feedback { font-weight: 500; }
+
+/* Footer */
+.g-footer { border-top: 1px solid var(--g-border); color: var(--g-muted); font-size: .9rem; margin-top: 3rem; padding: 1.5rem 0; }
+
+/* Budget progress states */
+.progress.g-budget { height: 1.25rem; border-radius: 999px; }
+.progress-bar.state-ok { background: var(--g-primary); }
+.progress-bar.state-warn { background: var(--g-accent); color: var(--g-text); }
+.progress-bar.state-over { background: #dc2626; }
+
+@media (max-width: 575.98px) {
+  .g-stat-value { font-size: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
